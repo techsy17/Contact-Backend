@@ -16,17 +16,6 @@ app.use(cors({
   ]
 }));
 
-app.use(cors({
-  origin: function(origin, callback){
-    // allow requests like Postman / server-to-server (no origin)
-    if(!origin) return callback(null, true);
-    if(allowedOrigins.indexOf(origin) === -1){
-      const msg = `CORS policy: This origin is not allowed -> ${origin}`;
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  }
-}));
 
 
 app.use(express.json());
