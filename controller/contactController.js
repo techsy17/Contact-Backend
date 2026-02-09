@@ -53,7 +53,7 @@ const deleteContact = async(req,res)=>{
         if(!removeContact){
             return res.status(400).json({ message: "Contact is not deleted,Please try again!" });
         }
-         res.status(200).json({ message: "Contact Deleted Successfully", deleteContact });
+         res.status(200).json({ message: "Contact Deleted Successfully", removeContact });
     } catch (error) {
         res.status(500).json({ message: "Something went wrong, please try again!!", error: error.message });
         
