@@ -9,12 +9,13 @@ connectDB();
 
 const app = express();
 
-app.use(
-    cors({
-        origin: "http://localhost:5173",
-        "https://contact-frontend-delta-blush.vercel.app"  // backend deploy url
-    })
-);
+app.use(cors({
+  origin: [
+    "http://localhost:5173", 
+    "https://contact-frontend-delta-blush.vercel.app" // backend deploy url
+  ]
+}));
+
 
 app.use(express.json());
 app.use(contactRoute);
