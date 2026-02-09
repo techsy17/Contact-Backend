@@ -22,7 +22,7 @@ app.use(contactRoute);
 
 
 app.get('/', (req, res) => {
-    res.send('Backend is running 🚀');
+    res.send('Backend is running');
 });
 
 
